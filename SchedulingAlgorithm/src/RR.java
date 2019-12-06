@@ -16,14 +16,16 @@ public class RR {
 						time += q;
 						copyBurst[i] -= q;
 					} else {
-						waitTime[i] = copyBurst[i] + time;
-						copyBurst[i] = q - time;
+						time += copyBurst[i];
+						waitTime[i] = time - process[i];
+						//waitTime[i] = copyBurst[i] + time;
+						//copyBurst[i] = q - time;
 						copyBurst[i] = 0;
 					}
 				}
-				if(flag)
-					break;
 			}
+			if(flag)
+				break;
 		}
 	}
 	
