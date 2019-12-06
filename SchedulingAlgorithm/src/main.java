@@ -31,6 +31,8 @@ public class main {
 		switch (choose) {
 		case 1:
 			System.out.println("****** Your choice was FCFS ******");
+			FCFS fcfs = new FCFS();
+			fcfs.printAll(procName, process, n);
 			break;
 		case 2:
 			break;
