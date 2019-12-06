@@ -15,18 +15,33 @@ public class main {
 		System.out.print("Choose your Process size = ");
 		int n = sc.nextInt();
 		
-		char c = 'A';
-		char[] procName = new char[n];
-		int[] process = new int[n];
-		System.out.println("Process | Burst-Time");
-		for(int i = 0; i < n; i++) {
-			procName[i] = c;
-			System.out.print("  " + c++ + "           ");
-			process[i] = sc.nextInt();
-		}
-		
 		System.out.print("Choose your Algorithm ");
 		int choose = sc.nextInt();
+		
+		char[] procName = new char[n];
+		int[] process = new int[n];
+		if(choose == 2) {
+			int[][] initMatrix = new int[n][n];
+			for(int i = 0; i < n; i++) {
+				System.out.println("Enter Process ID = ");
+				initMatrix[i][0] = sc.nextInt();
+				
+				System.out.println("Enter Arrival-Time = ");
+				initMatrix[i][1] = sc.nextInt();
+				
+				System.out.println("Enter Burst-Time = ");
+				initMatrix[i][2] = sc.nextInt();
+			}
+			
+		} else {
+			char c = 'A';
+			System.out.println("Process | Burst-Time");
+			for(int i = 0; i < n; i++) {
+				procName[i] = c;
+				System.out.print("  " + c++ + "           ");
+				process[i] = sc.nextInt();
+			}
+		}
 		
 		System.out.println();
 		switch (choose) {
@@ -36,6 +51,7 @@ public class main {
 			fcfs.printAll(procName, process, n);
 			break;
 		case 2:
+			System.out.println("****** Your choice was SJF ******");
 			break;
 		case 3:
 			System.out.println("****** Your choice was RR ******");
