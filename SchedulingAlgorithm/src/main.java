@@ -1,3 +1,4 @@
+import java.nio.channels.NonReadableChannelException;
 import java.util.Scanner;
 
 public class main {
@@ -37,6 +38,11 @@ public class main {
 		case 2:
 			break;
 		case 3:
+			System.out.println("****** Your choice was RR ******");
+			RR rr = new RR();
+			System.out.print("Quantum = ");
+			int q = sc.nextInt();
+			rr.printAll(procName, process, n, q);
 			break;
 		default:
 			break;

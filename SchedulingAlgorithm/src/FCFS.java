@@ -1,5 +1,3 @@
-import com.sun.jndi.url.iiopname.iiopnameURLContextFactory;
-
 public class FCFS {
 	private int[]waitTime, turnTime;
 	
